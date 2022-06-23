@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaLux-APP", "ClimaLux-app\ClimaLux-APP.csproj", "{9F9A201E-B348-46FF-BBCA-5C9EE037B706}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2065D5B8-C8AD-4C8D-A2A6-57E6BF5643F7} = {2065D5B8-C8AD-4C8D-A2A6-57E6BF5643F7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaLux-Data", "ClimaLux-Data\ClimaLux-Data.csproj", "{9ADC13D6-685E-47D4-A26C-39FBBFFE0E0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimaLux-Services", "ClimaLux-Services\ClimaLux-Services.csproj", "{2065D5B8-C8AD-4C8D-A2A6-57E6BF5643F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9ADC13D6-685E-47D4-A26C-39FBBFFE0E0E} = {9ADC13D6-685E-47D4-A26C-39FBBFFE0E0E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

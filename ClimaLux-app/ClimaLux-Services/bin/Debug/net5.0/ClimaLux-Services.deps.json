@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ClimaLux-Services/1.0.0": {
+        "runtime": {
+          "ClimaLux-Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClimaLux-Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
