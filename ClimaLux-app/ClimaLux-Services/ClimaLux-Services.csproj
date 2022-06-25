@@ -5,4 +5,8 @@
     <RootNamespace>ClimaLux_Services</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClimaLux-Data\ClimaLux-Data.csproj" />
+  </ItemGroup>
+
 </Project>
