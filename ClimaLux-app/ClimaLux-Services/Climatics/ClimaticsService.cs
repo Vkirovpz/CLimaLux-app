@@ -44,9 +44,14 @@ namespace ClimaLux_Services.Climatics
             await _context.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var clima = _context.Climatics.FirstOrDefault(c => c.Id == id);
+            if (clima != null)
+            {
+                _context.Remove(clima);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public Task<IEnumerable<NewClimaticSM>> GetAllAsync()
@@ -59,9 +64,9 @@ namespace ClimaLux_Services.Climatics
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(int id, NewClimaticSM climatic)
+        public async Task UpdateAsync(NewClimaticSM climatic)
         {
-            throw new NotImplementedException();
+            var clima = await _context.Climatics.FirstOrDefaultAsync()
         }
     }
 }
