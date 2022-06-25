@@ -10,3 +10,6 @@ C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Ser
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\obj\Debug\net5.0\ClimaLux-Services.dll
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\obj\Debug\net5.0\ref\ClimaLux-Services.dll
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\obj\Debug\net5.0\ClimaLux-Services.pdb
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\bin\Debug\net5.0\ClimaLux-Data.dll
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\bin\Debug\net5.0\ClimaLux-Data.pdb
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Services\obj\Debug\net5.0\ClimaLux-Services.csproj.CopyComplete

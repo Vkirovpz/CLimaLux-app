@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClimaLux_Data.Entities
 {
-    public class BtuPower
+    public class BtuPower: IEntityBase
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

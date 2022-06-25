@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace ClimaLux_Data.Entities
 {
-    public class Climatic
+    public class Climatic : IEntityBase
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

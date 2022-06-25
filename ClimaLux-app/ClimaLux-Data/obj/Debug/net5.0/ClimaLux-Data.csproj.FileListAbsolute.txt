@@ -12,3 +12,4 @@ C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Dat
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Data\bin\Debug\net5.0\ClimaLux-Data.runtimeconfig.json
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Data\bin\Debug\net5.0\ClimaLux-Data.runtimeconfig.dev.json
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Data\obj\Debug\net5.0\ClimaLux-Data.genruntimeconfig.cache
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-Data\obj\Debug\net5.0\ClimaLux-Data.csproj.AssemblyReference.cache

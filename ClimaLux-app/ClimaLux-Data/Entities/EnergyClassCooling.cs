@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ClimaLux_Data.Entities
 {
-    public class EnergyClassCooling
+    public class EnergyClassCooling : IEntityBase
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
         public string CoolClass { get; set; }
 
         public ICollection<Climatic> Climatics { get; set; } = new HashSet<Climatic>();
+       
     }
 }

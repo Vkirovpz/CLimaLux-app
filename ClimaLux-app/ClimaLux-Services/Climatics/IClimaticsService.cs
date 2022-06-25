@@ -10,12 +10,6 @@ namespace ClimaLux_Services.Climatics
 {
     public interface IClimaticsService
     {
-        Task<IEnumerable<NewClimaticSM>> GetAllAsync();
-        Task<Climatic> GetByIdAsync(int id);
-        Task AddAsync(NewClimaticSM climatic);
-        Task UpdateAsync(int id, NewClimaticSM climatic);
-        Task DeleteAsync(int id);
-        
         
     }
 }
