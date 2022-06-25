@@ -4,14 +4,16 @@ using ClimaLux_Data.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClimaLux_Data.Migrations
 {
     [DbContext(typeof(ClimaLuxDbContext))]
-    partial class ClimaLuxDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220623201206_addFullNamePropToUser")]
+    partial class addFullNamePropToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
