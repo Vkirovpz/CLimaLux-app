@@ -1,6 +1,7 @@
 
 using ClimaLux_Data.DbContext;
 using ClimaLux_Data.Entities;
+using ClimaLux_Services.Climatics;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,8 @@ namespace ClimaLux_app
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ClimaLuxDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            services.AddScoped<IClimaticsService, ClimaticsService>();
            
             services.AddDatabaseDeveloperPageExceptionFilter();
 

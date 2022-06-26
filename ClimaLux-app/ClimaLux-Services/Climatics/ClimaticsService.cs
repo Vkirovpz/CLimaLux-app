@@ -1,17 +1,12 @@
 ﻿using ClimaLux_Data.DbContext;
 using ClimaLux_Data.Entities;
-using ClimaLux_Services.Climatics.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ClimaLux_Services.Base;
+
 
 namespace ClimaLux_Services.Climatics
 {
-    public class ClimaticsService 
+    public class ClimaticsService : EntityBaseRepository<Climatic>, IClimaticsService
     {
-        
+        public ClimaticsService(ClimaLuxDbContext context) : base(context) { }
     }
 }

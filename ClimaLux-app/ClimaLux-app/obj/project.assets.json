@@ -2249,6 +2249,19 @@
         "runtime": {
           "bin/placeholder/ClimaLux-Data.dll": {}
         }
+      },
+      "ClimaLux-Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ClimaLux-Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClimaLux-Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClimaLux-Services.dll": {}
+        }
       }
     }
   },
@@ -7715,11 +7728,17 @@
       "type": "project",
       "path": "../ClimaLux-Data/ClimaLux-Data.csproj",
       "msbuildProject": "../ClimaLux-Data/ClimaLux-Data.csproj"
+    },
+    "ClimaLux-Services/1.0.0": {
+      "type": "project",
+      "path": "../ClimaLux-Services/ClimaLux-Services.csproj",
+      "msbuildProject": "../ClimaLux-Services/ClimaLux-Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "ClimaLux-Data >= 1.0.0",
+      "ClimaLux-Services >= 1.0.0",
       "Microsoft.AspNet.Mvc >= 5.2.9",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.17",
@@ -7760,6 +7779,9 @@
           "projectReferences": {
             "C:\\Users\\Valentin\\Desktop\\c#\\ClimaLux-app\\CLimaLux-app\\ClimaLux-app\\ClimaLux-Data\\ClimaLux-Data.csproj": {
               "projectPath": "C:\\Users\\Valentin\\Desktop\\c#\\ClimaLux-app\\CLimaLux-app\\ClimaLux-app\\ClimaLux-Data\\ClimaLux-Data.csproj"
+            },
+            "C:\\Users\\Valentin\\Desktop\\c#\\ClimaLux-app\\CLimaLux-app\\ClimaLux-app\\ClimaLux-Services\\ClimaLux-Services.csproj": {
+              "projectPath": "C:\\Users\\Valentin\\Desktop\\c#\\ClimaLux-app\\CLimaLux-app\\ClimaLux-app\\ClimaLux-Services\\ClimaLux-Services.csproj"
             }
           }
         }

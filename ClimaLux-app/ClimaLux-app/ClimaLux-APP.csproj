@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClimaLux-Data\ClimaLux-Data.csproj" />
+    <ProjectReference Include="..\ClimaLux-Services\ClimaLux-Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
