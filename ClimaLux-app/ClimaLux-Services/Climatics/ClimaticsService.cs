@@ -43,9 +43,10 @@ namespace ClimaLux_Services.Climatics
             await _context.SaveChangesAsync();
         }
 
-        public Task<Climatic> GetClimaticByIdAsync(int id)
+        public async Task<Climatic> GetClimaticByIdAsync(int id)
         {
-            throw new System.NotImplementedException();
+            var clima = await _context.Climatics.FirstOrDefaultAsync(n => n.Id == id);
+            return clima;
         }
 
         public async Task<NewClimaticDropdownsSM> GetNewClimaticDropdownsValues()
