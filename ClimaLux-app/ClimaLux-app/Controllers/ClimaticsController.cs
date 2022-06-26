@@ -20,5 +20,11 @@ namespace ClimaLux_app.Controllers
             var allClimas = await _climatics.GetAllAsync();
             return View(allClimas);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Create(NewClimaticVM)
+        {
+
+        }
     }
 }
