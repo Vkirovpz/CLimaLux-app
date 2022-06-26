@@ -73,7 +73,7 @@ namespace ClimaLux_app
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Climatics}/{action=Index}/{id?}");
                 //endpoints.MapRazorPages();
             });
         }

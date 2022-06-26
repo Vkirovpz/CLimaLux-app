@@ -34,6 +34,7 @@
       "ClimaLux-APP/1.0.0": {
         "dependencies": {
           "ClimaLux-Data": "1.0.0",
+          "ClimaLux-Services": "1.0.0",
           "Microsoft.AspNet.Mvc": "5.2.9",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.17",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
@@ -2058,6 +2059,17 @@
         },
         "compile": {
           "ClimaLux-Data.dll": {}
+        }
+      },
+      "ClimaLux-Services/1.0.0": {
+        "dependencies": {
+          "ClimaLux-Data": "1.0.0"
+        },
+        "runtime": {
+          "ClimaLux-Services.dll": {}
+        },
+        "compile": {
+          "ClimaLux-Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4705,6 +4717,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "ClimaLux-Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClimaLux-Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

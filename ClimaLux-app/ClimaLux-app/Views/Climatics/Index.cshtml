@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Climatic>
+
+@{
+    ViewData["Title"] = "All climas";
+}
+<div>
+    <img src="https://cdn5.focus.bg/bazar/0c/original/0c842720d2b539af3a9b71da8766d90d.jpg" alt="ClimaLuxLogo">
+</div>
+<div class="row banner-blocks-container banner-block-34213">
+    <div class="col-sm-12 col-sm-4 col-md-4">
+        <div class="banner-item is_a_link">
+            <div class="banner-image">
+                <img src="https://eclima.bg/image/cache/catalog/design/Icons/Free_Delivery_icons-50x50.png" alt="Безплатна доставка">
+            </div>
+            <div class="banner-info">
+                <div class="banner-title">Безплатна доставка</div>
+                <div class="banner-description">Всички климатици се доставят безплатно</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-sm-4 col-md-4">
+        <div class="banner-item ">
+            <div class="banner-image">
+                <img src="https://eclima.bg/image/cache/catalog/design/Icons/zashto_eclima-50x50.png" alt="Защо Клима Лукс">
+            </div>
+            <div class="banner-info">
+                <div class="banner-title">Защо Клима Лукс</div>
+                <div class="banner-description">Сигурност, качество и професионализъм</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-sm-4 col-md-4">
+        <div class="banner-item ">
+            <div class="banner-image">
+                <img src="https://eclima.bg/image/cache/catalog/design/Icons/0_procenta_lihva-50x50.png" alt="0% лихва">
+            </div>
+            <div class="banner-info">
+                <div class="banner-title">0% лихва</div>
+                <div class="banner-description">Изплащане без оскъпяване</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    @item.Model
+                                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                    {
+                                        <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                    }
+                                </h5>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@item.ImageUrl" width="100%" alt="@item.Model">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text">@item.Description</p>
+                            <p class="card-text"><b>Cinema: </b></p>
+                            <p class="card-text"><b>Category: </b>@item.Category</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
+                                    <i class="bi bi-eye-fill"></i> Show Details
+                                </a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+

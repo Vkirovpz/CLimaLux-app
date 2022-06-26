@@ -15,9 +15,10 @@ namespace ClimaLux_app.Controllers
             _climatics = climatics;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var allClimas = await _climatics.GetAllAsync();
+            return View(allClimas);
         }
     }
 }
