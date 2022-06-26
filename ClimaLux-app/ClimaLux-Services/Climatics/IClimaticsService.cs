@@ -12,5 +12,10 @@ namespace ClimaLux_Services.Climatics
     public interface IClimaticsService : IEntityBaseRepository<Climatic>
     {
         Task<NewClimaticDropdownsSM> GetNewClimaticDropdownsValues();
+
+        Task<Climatic> GetClimaticByIdAsync(int id);
+
+        Task AddNewCliamticAsync(NewClimaticSM clima);
+        Task UpdateClimaticAsync(NewClimaticSM clima);
     }
 }

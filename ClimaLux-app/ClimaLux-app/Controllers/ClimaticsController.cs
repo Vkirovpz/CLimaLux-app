@@ -5,7 +5,7 @@ using System.Linq;
 using ClimaLux_Services.Climatics;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-
+using ClimaLux_Services.Climatics.Models;
 
 namespace ClimaLux_app.Controllers
 {
@@ -23,7 +23,7 @@ namespace ClimaLux_app.Controllers
             return View(allClimas);
         }
 
-        
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             var climaDropdownsData = await _climatics.GetNewClimaticDropdownsValues();
@@ -36,6 +36,48 @@ namespace ClimaLux_app.Controllers
             ViewBag.RoomSizes = new SelectList(climaDropdownsData.RoomSizes, "Id", "Size");
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(NewClimaticVM clima)
+        {
+            if (!ModelState.IsValid)
+            {
+                var climaDropdownsData = await _climatics.GetNewClimaticDropdownsValues();
+
+                ViewBag.Brands = new SelectList(climaDropdownsData.Brands, "Id", "Name");
+                ViewBag.Categories = new SelectList(climaDropdownsData.Categories, "Id", "Name");
+                ViewBag.BtuPowers = new SelectList(climaDropdownsData.BtuPowers, "Id", "Power");
+                ViewBag.EnergyClassCoolings = new SelectList(climaDropdownsData.EnergyClassCoolings, "Id", "CoolClass");
+                ViewBag.EnergyClassHeatings = new SelectList(climaDropdownsData.EnergyClassHeatings, "Id", "HeatClass");
+                ViewBag.RoomSizes = new SelectList(climaDropdownsData.RoomSizes, "Id", "Size");
+
+                return View(clima);
+            }
+
+            var climaToAdd = new NewClimaticSM()
+            {
+                Model = clima.Model,
+                Description = clima.Description,
+                Price = clima.Price,
+                CoolAgent = clima.CoolAgent,
+                CoolingKWPower = clima.CoolingKWPower,
+                HeatingKWPower = clima.HeatingKWPower,
+                ImageUrl = clima.ImageUrl,
+                NoiseLevelInside = clima.NoiseLevelInside,
+                NoiseLevelOutside = clima.NoiseLevelOutside,
+                Origin = clima.Origin,
+                Waranty = clima.Waranty,
+                BrandId = clima.BrandId,
+                CategoryId = clima.CategoryId,
+                BtuPowerId = clima.BtuPowerId,
+                EnergyClassCoolingId = clima.EnergyClassCoolingId,
+                EnergyClassHeatingId = clima.EnergyClassHeatingId,
+                RoomSizeId = clima.RoomSizeId
+            };
+
+            await _climatics.AddNewCliamticAsync(climaToAdd);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

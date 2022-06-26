@@ -17,6 +17,37 @@ namespace ClimaLux_Services.Climatics
             _context = context;
         }
 
+        public async Task AddNewCliamticAsync(NewClimaticSM clima)
+        {
+            var climaToAdd = new Climatic()
+            {
+                Model = clima.Model,
+                Description = clima.Description,
+                Price = clima.Price,
+                CoolAgent = clima.CoolAgent,
+                CoolingKWPower = clima.CoolingKWPower,
+                HeatingKWPower = clima.HeatingKWPower,
+                ImageUrl = clima.ImageUrl,
+                NoiseLevelInside = clima.NoiseLevelInside,
+                NoiseLevelOutside = clima.NoiseLevelOutside,
+                Origin = clima.Origin,
+                Waranty = clima.Waranty,
+                BrandId = clima.BrandId,
+                CategoryId = clima.CategoryId,
+                BtuPowerId = clima.BtuPowerId,
+                EnergyClassCoolingId = clima.EnergyClassCoolingId,
+                EnergyClassHeatingId = clima.EnergyClassHeatingId,
+                RoomSizeId = clima.RoomSizeId
+            };
+            await _context.Climatics.AddAsync(climaToAdd);
+            await _context.SaveChangesAsync();
+        }
+
+        public Task<Climatic> GetClimaticByIdAsync(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<NewClimaticDropdownsSM> GetNewClimaticDropdownsValues()
         {
             var response = new NewClimaticDropdownsSM()
@@ -31,6 +62,11 @@ namespace ClimaLux_Services.Climatics
             };
 
             return response;
+        }
+
+        public Task UpdateClimaticAsync(NewClimaticSM clima)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
