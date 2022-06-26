@@ -11,6 +11,6 @@ namespace ClimaLux_Services.Climatics
 {
     public interface IClimaticsService : IEntityBaseRepository<Climatic>
     {
-        Task<NewMovieDropdownsSM> GetNewMovieDropdownsValues();
+        Task<NewClimaticDropdownsSM> GetNewClimaticDropdownsValues();
     }
 }
