@@ -79,5 +79,72 @@ namespace ClimaLux_app.Controllers
             await _climatics.AddNewCliamticAsync(climaToAdd);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var clima = await _climatics.GetClimaticByIdAsync(id);
+            if (clima == null) return View("Not found");
+
+            var response = new NewClimaticVM()
+            {
+                Model = clima.Model,
+                Description = clima.Description,
+                Price = clima.Price,
+                CoolAgent = clima.CoolAgent,
+                CoolingKWPower = clima.CoolingKWPower,
+                HeatingKWPower = clima.HeatingKWPower,
+                ImageUrl = clima.ImageUrl,
+                NoiseLevelInside = clima.NoiseLevelInside,
+                NoiseLevelOutside = clima.NoiseLevelOutside,
+                Origin = clima.Origin,
+                Waranty = clima.Waranty,
+                BrandId = clima.BrandId,
+                CategoryId = clima.CategoryId,
+                BtuPowerId = clima.BtuPowerId,
+                EnergyClassCoolingId = clima.EnergyClassCoolingId,
+                EnergyClassHeatingId = clima.EnergyClassHeatingId,
+                RoomSizeId = clima.RoomSizeId
+            };
+            var climaDropdownsData = await _climatics.GetNewClimaticDropdownsValues();
+
+            ViewBag.Brands = new SelectList(climaDropdownsData.Brands, "Id", "Name");
+            ViewBag.Categories = new SelectList(climaDropdownsData.Categories, "Id", "Name");
+            ViewBag.BtuPowers = new SelectList(climaDropdownsData.BtuPowers, "Id", "Power");
+            ViewBag.EnergyClassCoolings = new SelectList(climaDropdownsData.EnergyClassCoolings, "Id", "CoolClass");
+            ViewBag.EnergyClassHeatings = new SelectList(climaDropdownsData.EnergyClassHeatings, "Id", "HeatClass");
+            ViewBag.RoomSizes = new SelectList(climaDropdownsData.RoomSizes, "Id", "Size");
+
+            return View(response);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var clima = await _climatics.GetClimaticByIdAsync(id);
+
+            var climaDetails = new NewClimaticVM()
+            {
+                Model = clima.Model,
+                Description = clima.Description,
+                Price = clima.Price,
+                CoolAgent = clima.CoolAgent,
+                CoolingKWPower = clima.CoolingKWPower,
+                HeatingKWPower = clima.HeatingKWPower,
+                ImageUrl = clima.ImageUrl,
+                NoiseLevelInside = clima.NoiseLevelInside,
+                NoiseLevelOutside = clima.NoiseLevelOutside,
+                Origin = clima.Origin,
+                Waranty = clima.Waranty,
+                BrandId = clima.BrandId,
+                CategoryId = clima.CategoryId,
+                BtuPowerId = clima.BtuPowerId,
+                EnergyClassCoolingId = clima.EnergyClassCoolingId,
+                EnergyClassHeatingId = clima.EnergyClassHeatingId,
+                RoomSizeId = clima.RoomSizeId
+
+            };
+
+            return View(climaDetails);
+        }
     }
 }

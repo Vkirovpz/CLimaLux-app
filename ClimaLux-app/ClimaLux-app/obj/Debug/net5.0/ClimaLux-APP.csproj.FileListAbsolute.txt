@@ -448,3 +448,5 @@ C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app\bin\Debug\net5.0\ClimaLux-Services.pdb
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app\obj\Debug\net5.0\Razor\Views\Climatics\Index.cshtml.g.cs
 C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app\obj\Debug\net5.0\Razor\Views\Climatics\Create.cshtml.g.cs
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app\obj\Debug\net5.0\Razor\Views\Climatics\Edit.cshtml.g.cs
+C:\Users\Valentin\Desktop\c#\ClimaLux-app\CLimaLux-app\ClimaLux-app\ClimaLux-app\obj\Debug\net5.0\Razor\Views\Climatics\Details.cshtml.g.cs

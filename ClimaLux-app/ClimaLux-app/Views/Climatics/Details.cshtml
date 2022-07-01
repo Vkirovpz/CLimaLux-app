@@ -1,0 +1,43 @@
+﻿@model NewClimaticVM
+
+<h1 class="my-4">
+    @Model.BrandId @Model.Model
+</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <img class="img-fluid" src="@Model.ImageUrl" alt="">
+    </div>
+
+    <div class="col-md-4">
+        <h3 class="my-3">Характеристики</h3>
+        <ul>
+            <li>Производител: @Model.BrandId</li>
+            <li>Модел: @Model.Model</li>
+            <li>Категория: @Model.CategoryId</li>
+            <li>Произход: @Model.Origin</li>
+            <li>Хладилен агент: @Model.CoolAgent</li>
+            <li>Ниво шум вътрешно тяло: @Model.NoiseLevelInside</li>
+            <li>Ниво шум външно тяло: @Model.NoiseLevelOutside</li>
+            <li>Консумирана мощност на охлаждане(kW): @Model.CoolingKWPower</li>
+            <li>Консумирана мощност на отопление(kW): @Model.HeatingKWPower</li>
+            <li>Мощност: @Model.BtuPowerId</li>
+            <li>Енергиен клас охлаждане: @Model.EnergyClassCoolingId</li>
+            <li>Енергиен клас отопление: @Model.EnergyClassHeatingId</li>
+            <li>Размер помещение: @Model.RoomSizeId</li>
+            <li>Гаранция: @Model.Waranty</li>
+            <li>Price: @Model.Price</li>
+        </ul>
+
+        <h3 class="my-3">Описание</h3>
+        <p>@Model.Description</p>
+
+        @*<h3 class="my-3">Dealer Info:</h3>*@
+        @*<ul>
+            <li>Dealer: @Model.DealerName</li>
+            <li>Phone Number: @Model.DealerPhoneNumber</li>
+            <li>Town: @Model.DealerTown</li>
+        </ul>*@
+    </div>
+
+</div>

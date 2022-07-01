@@ -65,9 +65,32 @@ namespace ClimaLux_Services.Climatics
             return response;
         }
 
-        public Task UpdateClimaticAsync(NewClimaticSM clima)
+        public async Task UpdateClimaticAsync(NewClimaticSM clima)
         {
-            throw new System.NotImplementedException();
+            var dbClima = await _context.Climatics.FirstOrDefaultAsync(n => n.Id == clima.Id);
+
+            if (dbClima != null)
+            {
+                dbClima.Model = clima.Model;
+                dbClima.Description = clima.Description;
+                dbClima.Price = clima.Price;
+                dbClima.CoolAgent = clima.CoolAgent;
+                dbClima.CoolingKWPower = clima.CoolingKWPower;
+                dbClima.HeatingKWPower = clima.HeatingKWPower;
+                dbClima.ImageUrl = clima.ImageUrl;
+                dbClima.NoiseLevelInside = clima.NoiseLevelInside;
+                dbClima.NoiseLevelOutside = clima.NoiseLevelOutside;
+                dbClima.Origin = clima.Origin;
+                dbClima.Waranty = clima.Waranty;
+                dbClima.BrandId = clima.BrandId;
+                dbClima.CategoryId = clima.CategoryId;
+                dbClima.BtuPowerId = clima.BtuPowerId;
+                dbClima.EnergyClassCoolingId = clima.EnergyClassCoolingId;
+                dbClima.EnergyClassHeatingId = clima.EnergyClassHeatingId;
+                dbClima.RoomSizeId = clima.RoomSizeId;
+
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
