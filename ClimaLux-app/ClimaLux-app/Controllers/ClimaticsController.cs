@@ -6,6 +6,7 @@ using ClimaLux_Services.Climatics;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using ClimaLux_Services.Climatics.Models;
+using ClimaLux_Data.Entities;
 
 namespace ClimaLux_app.Controllers
 {
@@ -122,29 +123,7 @@ namespace ClimaLux_app.Controllers
         {
             var clima = await _climatics.GetClimaticByIdAsync(id);
 
-            var climaDetails = new NewClimaticVM()
-            {
-                Model = clima.Model,
-                Description = clima.Description,
-                Price = clima.Price,
-                CoolAgent = clima.CoolAgent,
-                CoolingKWPower = clima.CoolingKWPower,
-                HeatingKWPower = clima.HeatingKWPower,
-                ImageUrl = clima.ImageUrl,
-                NoiseLevelInside = clima.NoiseLevelInside,
-                NoiseLevelOutside = clima.NoiseLevelOutside,
-                Origin = clima.Origin,
-                Waranty = clima.Waranty,
-                BrandId = clima.BrandId,
-                CategoryId = clima.CategoryId,
-                BtuPowerId = clima.BtuPowerId,
-                EnergyClassCoolingId = clima.EnergyClassCoolingId,
-                EnergyClassHeatingId = clima.EnergyClassHeatingId,
-                RoomSizeId = clima.RoomSizeId
-
-            };
-
-            return View(climaDetails);
+            return View(clima);
         }
     }
 }

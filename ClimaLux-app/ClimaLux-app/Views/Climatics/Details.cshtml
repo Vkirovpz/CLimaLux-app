@@ -1,7 +1,7 @@
-﻿@model NewClimaticVM
+﻿@model Climatic
 
 <h1 class="my-4">
-    @Model.BrandId @Model.Model
+    @Model.Brand.Name @Model.Model
 </h1>
 
 <div class="row">
@@ -12,19 +12,19 @@
     <div class="col-md-4">
         <h3 class="my-3">Характеристики</h3>
         <ul>
-            <li>Производител: @Model.BrandId</li>
+            <li>Производител: @Model.Brand.Name</li>
             <li>Модел: @Model.Model</li>
-            <li>Категория: @Model.CategoryId</li>
+            <li>Категория: @Model.Category.Name</li>
             <li>Произход: @Model.Origin</li>
             <li>Хладилен агент: @Model.CoolAgent</li>
             <li>Ниво шум вътрешно тяло: @Model.NoiseLevelInside</li>
             <li>Ниво шум външно тяло: @Model.NoiseLevelOutside</li>
             <li>Консумирана мощност на охлаждане(kW): @Model.CoolingKWPower</li>
             <li>Консумирана мощност на отопление(kW): @Model.HeatingKWPower</li>
-            <li>Мощност: @Model.BtuPowerId</li>
-            <li>Енергиен клас охлаждане: @Model.EnergyClassCoolingId</li>
-            <li>Енергиен клас отопление: @Model.EnergyClassHeatingId</li>
-            <li>Размер помещение: @Model.RoomSizeId</li>
+            <li>Мощност: @Model.BtuPower.Power</li>
+            <li>Енергиен клас охлаждане: @Model.EnergyClassCooling.CoolClass</li>
+            <li>Енергиен клас отопление: @Model.EnergyClassHeating.HeatClass</li>
+            <li>Размер помещение: @Model.RoomSize.Size</li>
             <li>Гаранция: @Model.Waranty</li>
             <li>Price: @Model.Price</li>
         </ul>

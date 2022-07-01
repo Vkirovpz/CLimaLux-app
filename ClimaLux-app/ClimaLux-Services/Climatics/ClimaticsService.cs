@@ -45,7 +45,14 @@ namespace ClimaLux_Services.Climatics
 
         public async Task<Climatic> GetClimaticByIdAsync(int id)
         {
-            var clima = await _context.Climatics.FirstOrDefaultAsync(n => n.Id == id);
+            var clima = await _context.Climatics
+                .Include(b=> b.Brand)
+                .Include(c => c.Category)
+                .Include(b=> b.BtuPower)
+                .Include(ec => ec.EnergyClassCooling)
+                .Include(eh => eh.EnergyClassHeating)
+                .Include(r=> r.RoomSize)
+                .FirstOrDefaultAsync(n => n.Id == id);
             return clima;
         }
 
