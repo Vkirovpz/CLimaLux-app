@@ -3,6 +3,7 @@ using ClimaLux_Data.Entities;
 using ClimaLux_Services.Base;
 using ClimaLux_Services.Climatics.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -99,5 +100,7 @@ namespace ClimaLux_Services.Climatics
                 await _context.SaveChangesAsync();
             }
         }
+
+
     }
 }

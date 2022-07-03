@@ -17,5 +17,7 @@ namespace ClimaLux_Services.Climatics
 
         Task AddNewCliamticAsync(NewClimaticSM clima);
         Task UpdateClimaticAsync(NewClimaticSM clima);
+
+      
     }
 }

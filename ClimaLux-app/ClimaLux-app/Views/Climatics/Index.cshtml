@@ -78,7 +78,11 @@
                                     <i class="bi bi-eye-fill"></i> Промени
                                 </a>
 
-                                <a class="btn btn-outline-primary float-right" asp-controller="Climatics" asp-action="Details" asp-route-id="@item.Id">
+                                <a class="btn btn-outline-primary" asp-action="Delete" asp-route-id="@item.Id">
+                                    <i class="bi bi-eye-fill"></i> Изртий
+                                </a>
+
+                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
                                     <i class="bi bi-eye-fill"></i> Детайли
                                 </a>
 

@@ -172,5 +172,17 @@ namespace ClimaLux_app.Controllers
             return RedirectToAction(nameof(Index));
        
         }
+
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var clima = await _climatics.GetClimaticByIdAsync(id);
+
+            if (clima == null) return View("NotFound");
+
+            await _climatics.DeleteAsync(id);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
